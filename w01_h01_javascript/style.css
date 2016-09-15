@@ -1,0 +1,62 @@
+.bigContainer{
+  position: relative;
+  left:35vw;
+  top:30vh;
+}
+
+#text{
+  position:relative;
+  left:40px;
+  width:170px;
+  height:2em;
+}
+
+#add-to-list{
+  position:relative;
+  left:5em;
+  width:100px;
+  height:2.5em;
+  background-color: white;
+}
+
+#delete-to-list{
+  position:relative;
+  left:7em;
+  width:100px;
+  height:2.5em;
+  background-color: white;
+}
+
+li {
+  list-style: none;
+  background: blue;
+  color: #fff;
+  height: 0;
+  line-height: 2em;
+  margin: 0;
+  padding: 0 0.5em;
+  overflow: hidden;
+  width: 10em;
+
+}
+
+li.show {
+  height: 2em;
+  margin: 2px 0;
+}
+
+.fade {
+  perspective: 100px;
+}
+
+.fade li {
+  opacity: 0;
+  transform: rotateX(-90deg);
+  transition: all 0.5s cubic-bezier(.36,-0.64,.34,1.76);
+}
+
+.fade li.show {
+  opacity: 1;
+  transform: none;
+  transition: all 0.5s cubic-bezier(.36,-0.64,.34,1.76);
+}
