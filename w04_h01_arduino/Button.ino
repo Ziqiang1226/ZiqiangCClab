@@ -15,7 +15,7 @@ void setup() {
   pinMode(led3, OUTPUT);
 
   pinMode(buttonPin, INPUT_PULLUP);
-  pinMode(buttonPin2, INPUT);
+  pinMode(buttonPin2, INPUT_PULLUP);
 }
 
 void loop() {
