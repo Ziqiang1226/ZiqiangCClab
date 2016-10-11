@@ -16,3 +16,9 @@ https://vimeo.com/185269626
 w05_h01_sensor:
 
 https://vimeo.com/185511428
+
+w06_h01_joystick:
+
+https://vimeo.com/186484825
+
+There is a problem I met in Processing. I cannot use INPUT_PULLUP in Processing, so I cannot use button of my joystick. Can you tell me how to fix it?
