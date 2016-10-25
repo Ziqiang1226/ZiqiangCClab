@@ -25,7 +25,7 @@ There is a problem I met in Processing. I cannot use INPUT_PULLUP in Processing,
 
 w09_h01_midterm
 
-name: obstacle car-- for photography
+name: obstacle avoiding car-- for photography
 
 concept: an obstacle car taking photos everywhere, from a different angle. 
 
