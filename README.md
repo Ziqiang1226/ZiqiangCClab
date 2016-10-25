@@ -22,3 +22,13 @@ w06_h01_joystick:
 https://vimeo.com/186484825
 
 There is a problem I met in Processing. I cannot use INPUT_PULLUP in Processing, so I cannot use button of my joystick. Can you tell me how to fix it?
+
+w09_h01_midterm
+
+name: obstacle car-- for photography
+
+concept: an obstacle car taking photos everywhere, from a different angle. 
+
+reserch: http://dronebly.com/5-best-quadcopters-with-camera-you-have-to-see
+
+video: https://vimeo.com/188892304
