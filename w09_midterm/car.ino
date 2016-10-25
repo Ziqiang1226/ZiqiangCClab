@@ -1,16 +1,20 @@
+int trigPin= 5;
+int echoPin= 4;
 
-int trigPin= 10;
-int echoPin= 11;
-int rightMotorPin= 6;
-int leftMotorPin= 5;
-int state= 0;
+int pin1= 8;
+int pin2= 9;
+int pin3= 10;
+int pin4= 11;
 
-String Val;
 
 void setup() {
   Serial.begin(9600);
   pinMode(trigPin, OUTPUT);
   pinMode(echoPin, INPUT);
+  pinMode(pin1, OUTPUT);
+  pinMode(pin2, OUTPUT);
+  pinMode(pin3, OUTPUT);
+  pinMode(pin4, OUTPUT);
 
 }
 
@@ -21,43 +25,33 @@ void loop() {
   digitalWrite(trigPin, LOW);
 
   duration= pulseIn(echoPin, HIGH);
-  distance= (duration/2)/29.1;
+  distance= (duration/2)/29.1;  
+
+  Serial.print("distance");
+  Serial.print(distance);
+  delay(500);
+
+  digitalWrite(pin1, LOW);
+  digitalWrite(pin2, HIGH);
+  digitalWrite(pin3, HIGH);
+  digitalWrite(pin4, LOW);
   
-  if(Serial.available()){
-    Val= Serial.read();
-  }
+  delay(500);
   
-  if(Val== "/n"){
-      state++;
-    }
-  
-  if(state== 1){
-    if(Val== "w"){
-        digitalWrite(leftMotorPin, HIGH);
-        digitalWrite(rightMotorPin, HIGH);
-      }
-      if(Val== "a"){
-          digitalWrite(leftMotorPin, LOW);
-          digitalWrite(rightMotorPin, HIGH);
-        }
-        if(Val== "d"){
-            digitalWrite(leftMotorPin, HIGH);
-            digitalWrite(rightMotorPin, LOW);
-          }
-    }
-    
-  if(state== 2){
-      digitalWrite(leftMotorPin, HIGH);
-      digitalWrite(rightMotorPin, HIGH);
+  if(distance<10){
+      digitalWrite(pin1, LOW);
+      digitalWrite(pin2, LOW);
+      digitalWrite(pin3, LOW);
+      digitalWrite(pin4, LOW);
+
+      delay(1000);
       
-      if(distance< 10){
-          digitalWrite(leftMotorPin, HIGH);
-          digitalWrite(rightMotorPin, LOW);
-        }
+      digitalWrite(pin1, LOW);
+      digitalWrite(pin2, HIGH);
+      digitalWrite(pin3, LOW);
+      digitalWrite(pin4, HIGH);
+      
     }
-    
-  if(state== 3){
-      state= 0;
-    }
+  
 
 }
